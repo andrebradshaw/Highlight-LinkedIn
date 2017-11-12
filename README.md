@@ -7,10 +7,11 @@ The tool will highlight those words and give you the total number of hits on the
 How to install:
 
 Do you use bookmark buttons? 
+
 +Yes: 
 1) Great! Just copy everything listed in the highlight_bookmark.txt file and past that into the URL form-field of a new bookmark.
 
--No: Sad to hear that. You should use Bookmark buttons. 
+-No: I am sad to hear that. You should use Bookmark buttons. 
 1) Copy everything listed in the highlight_bookmark.txt to your clipboard
 2) Open Chrome. 
 3) Enable the bookmark bar by pressing CTRL+Shift+B (Windows) OR CMD+Shift+B (Mac).
