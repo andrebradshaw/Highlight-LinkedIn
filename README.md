@@ -20,9 +20,17 @@ Do you use bookmark buttons?
 
 
 How to use:
-Click the button when on a LinkedIn Profile *(Basic for now. I will update Recruiter and Sales Nav soon)
+Click the button you created when on a LinkedIn Profile *(Basic for now. I will update Recruiter and Sales Nav soon)
 A prompt box will ask you to enter the keywords you would like to highlight. That is it.
 
 This tool supports boolean, so you can just drop your search directly into the prompt without making any changes. 
 "quoted phrases" will be highlighted as such. OR, AND, (), *, operators will just be deleted.
+
+
+
+Future Updates:
+1) NEAR operator support
+2) Recruiter and Sales Navigator pofile support
+3) Support for all websites
+4) Tell me what you would like to see
 
