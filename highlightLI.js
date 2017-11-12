@@ -1,4 +1,3 @@
-
 var arrie = ["pv-entity__summary-info", "pv-skill-entity__skill-name", "pv-top-card-section__summary-text", "pv-entity__description", "truncate-multiline--truncation-target", "pv-top-card-section__headline", "pv-recommendation-entity__text"];
 var booleanString = prompt("drop your string here");
 var booleanArray1 = booleanString.replace(/\(|\)|\*|,|\&/ig, '');
@@ -39,6 +38,12 @@ var heaterC = count * 3.5;
 var heaterS = count * 1.1;
 var colorNumC = colorstart - heaterC;
 var colorNumS = colorstart - heaterS;
+if (colorNumC < -30) {
+  colorNumC = -30;
+}
+if (colorNumS < 45) {
+  colorNumS = 45;
+}
     var poop = '<b style="background-color:hsl(33, 32%, 95%); border-radius:6px; font-size:8px;">' + '[' + count + ']' + '</b>' + '<b style="background-color:hsl(' + colorNumC + ', 100%, '+ colorNumS + '%); border-radius:6px;">' + tstWord + '</b>';
     var remmie = exprOuterHtml.replace(rgXword, poop);
     document.getElementsByClassName(elm)[i].outerHTML = remmie;
