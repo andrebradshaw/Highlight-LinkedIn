@@ -9,7 +9,7 @@ How to install:
 Do you use bookmark buttons? 
 
 +Yes: 
-1) Great! Just copy everything listed in the highlight_bookmark.txt file and past that into the URL form-field of a new bookmark.
+1) Great! Just copy everything listed in the highlight_bookmark.txt file and paste that into the URL form-field of a new bookmark.
 
 -No: I am sad to hear that. You should use Bookmark buttons. 
 1) Copy everything listed in the highlight_bookmark.txt to your clipboard
