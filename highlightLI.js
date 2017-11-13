@@ -1,7 +1,8 @@
 
-
-document.getElementsByClassName("pv-top-card-section__summary-toggle-button button-tertiary-small mt4")[0].click();
-
+var moreSumB = document.getElementsByClassName("pv-top-card-section__summary-toggle-button button-tertiary-small mt4");
+if (moreSumB == true) {
+moreSumB[0].click();
+}
     for (var b = 0; b < document.getElementsByClassName("pv-profile-section__see-more-inline link").length; b++) {
       var moreJ = document.getElementsByClassName("pv-profile-section__see-more-inline link")[b].innerText;
       if (moreJ == "See more positions") {
@@ -21,7 +22,7 @@ document.getElementsByClassName("pv-top-card-section__summary-toggle-button butt
 function highlight() {
 setTimeout(function() {
 var arrie = ["pv-entity__summary-info", "pv-skill-entity__skill-name", "pv-top-card-section__summary-text", "pv-entity__description", "truncate-multiline--truncation-target", "pv-top-card-section__headline", "pv-recommendation-entity__text"];
-var booleanString = prompt("drop your string here");
+var booleanString = prompt("Paste your keywords here.");
 var booleanArray1 = booleanString.replace(/\(|\)|\*|,|\&/ig, '');
 var booleanArray2 = booleanArray1.replace(/\WOR\W|\WAND\W/ig, ' ');
 var regXquotedWrd = /".*?"/igm;
@@ -66,7 +67,7 @@ if (colorNumC < -20) {
 if (colorNumS < 45) {
   colorNumS = 45;
 }
-    var poop = '<b style="background-color:hsl(33, 32%, 95%); border-radius:6px; font-size:8px;">' + '[' + count + ']' + '</b>' + '<b style="background-color:hsl(' + colorNumC + ', 100%, '+ colorNumS + '%); border-radius:6px;">' + tstWord + '</b>';
+    var poop = '<b style="background-color:hsl(33, 32%, 95%); border-radius:6px; font-size:8px; vertical-align: 10px;">' + '(' + count + ')' + '</b>' + '<b style="background-color:hsl(' + colorNumC + ', 100%, '+ colorNumS + '%); border-radius:6px;">' + tstWord + '</b>';
     var remmie = exprOuterHtml.replace(rgXword, poop);
     document.getElementsByClassName(elm)[i].outerHTML = remmie;
   }
