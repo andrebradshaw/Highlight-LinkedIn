@@ -1,13 +1,14 @@
+
+
 document.getElementsByClassName("pv-top-card-section__summary-toggle-button button-tertiary-small mt4")[0].click();
-window.scrollTo(0, document.body.scrollHeight);
-window.scrollTo(0, document.body.scrollHeight);
-window.scrollTo(0, document.body.scrollHeight);
+
     for (var b = 0; b < document.getElementsByClassName("pv-profile-section__see-more-inline link").length; b++) {
       var moreJ = document.getElementsByClassName("pv-profile-section__see-more-inline link")[b].innerText;
       if (moreJ == "See more positions") {
         document.getElementsByClassName("pv-profile-section__see-more-inline link")[b].click();
       }
     }
+
     for (var c = 0; c < document.getElementsByClassName("pv-profile-section__see-more-inline link").length; c++) {
       var moremoreJob = document.getElementsByClassName("pv-profile-section__see-more-inline link")[c].innerText;
       var regXseemoreJ = /See\s\d\smore/;
@@ -16,6 +17,7 @@ window.scrollTo(0, document.body.scrollHeight);
         document.getElementsByClassName("pv-profile-section__see-more-inline link")[c].click();
       }
     }
+
 function highlight() {
 setTimeout(function() {
 var arrie = ["pv-entity__summary-info", "pv-skill-entity__skill-name", "pv-top-card-section__summary-text", "pv-entity__description", "truncate-multiline--truncation-target", "pv-top-card-section__headline", "pv-recommendation-entity__text"];
@@ -55,7 +57,7 @@ while (rgXword.exec(docText) !== null) {
 }
 var colorstart = 70;
 var heaterC = count * 3.5;
-var heaterS = count * 1.1;
+var heaterS = count * 1.25;
 var colorNumC = colorstart - heaterC;
 var colorNumS = colorstart - heaterS;
 if (colorNumC < -20) {
