@@ -25,12 +25,18 @@ Click the button you created when on a LinkedIn Profile *(Basic for now. I will 
 A prompt box will ask you to enter the keywords you would like to highlight. That is it.
 
 This tool supports boolean, so you can just drop your search directly into the prompt without making any changes. 
-"quoted phrases" will be highlighted as such. OR, AND, (), *, operators will just be deleted.
+"quoted phrases" will be highlighted as such. OR, AND, () operators will just be deleted as they are not applicable.
+
+Features:
+  1) Highlights all of your keywords
+  2) Highlighted color changes based on the keyword frequency
+  3) Number of matched keywords is listed in front of the keyword
+  4) Search for ambiguos phrases with a NEAR operator: "n3r"
+    a) n3r usage: drive n3r change AND data n3r "process optimization"
 
 
 Future Updates:
-  1) NEAR operator support (Why that went away is beyond me)
-  2) Recruiter and Sales Navigator pofile support
-  3) Support for all websites
-  4) Tell me what else you would like to see
+  1) Recruiter and Sales Navigator pofile support
+  2) Support for all websites
+  *) Tell me what else you would like to see
 
