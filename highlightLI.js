@@ -1,11 +1,6 @@
-
-var moreSumB = document.getElementsByClassName("pv-top-card-section__summary-toggle-button button-tertiary-small mt4");
-if (moreSumB) {
-  moreSumB[0].click();
-}
-var arrie = ["pv-entity__summary-info", "pv-skill-entity__skill-name", "pv-top-card-section__summary-text", "pv-entity__description", "truncate-multiline--truncation-target", "pv-top-card-section__headline", "pv-recommendation-entity__text","profile-info", "module-body searchable", "position", "module primary-module"]; 
+var arrie = ["pv-entity__summary-info", "pv-skill-entity__skill-name", "pv-top-card-section__summary-text", "pv-entity__description", "truncate-multiline--truncation-target", "pv-top-card-section__headline", "pv-recommendation-entity__text", "profile-info", "module-body searchable", "position", "module primary-module", "title", "positions", "description", "skills"];
 var fullDocHTML = document.body.outerHTML;
-var booleanString = prompt("Paste your keywords here."); 
+var booleanString = prompt("Paste your keywords here.");
 
 var regXgetNEARs = /\w+\sn3r\s\w+|".*?"\sn3r\s\w+|\w+\sn3r\s".*?"|".*?"\sn3r\s".*?"/igm;
 var matchNEARsrh;
@@ -37,15 +32,16 @@ if (n3r) {
     console.log(n3A);
   }
 }
+
 function nearfield() {
   if (n3A) {
-var itemArr = JSON.parse('["' + n3A + '"]');
+    var itemArr = JSON.parse('["' + n3A + '"]');
     arrie.forEach(function(elm) {
       for (i = 0; i < document.getElementsByClassName(elm).length; i++) {
         for (let e = 0; e < itemArr.length; e++) {
           var exprOuterHtml = document.getElementsByClassName(elm)[i].outerHTML;
           var tstWord = itemArr[e];
-          var rgXword = new RegExp('\\b' + tstWord, "ig");
+          var rgXword = new RegExp('\\b' + tstWord, "igm");
           var docText = document.body.innerText;
           var count = 0;
           while (rgXword.exec(docText) !== null) {
@@ -63,7 +59,7 @@ var itemArr = JSON.parse('["' + n3A + '"]');
           if (colorNumS < 56) {
             colorNumS = 56;
           }
-          var poop = '<b style="background-color:hsl(' + colorNumC + ', 100%, ' + colorNumS + '%); border-radius:6px;">' + tstWord + '</b>';
+          var poop = '</b>' + '<b style="background-color:hsl(' + colorNumC + ', 100%, ' + colorNumS + '%); border-radius:6px;">' + tstWord + '</b>';
           var remmie = exprOuterHtml.replace(rgXword, poop);
           document.getElementsByClassName(elm)[i].outerHTML = remmie;
         }
@@ -71,30 +67,31 @@ var itemArr = JSON.parse('["' + n3A + '"]');
     });
   }
 }
-  var rr = new RegExp(boolNEAR_OR, "igm");
-  var edit = booleanString.replace(rr, '');
-  var booleanArray1 = edit.replace(/\(|\)|\*|,|\&/ig, '');
-  var booleanArray2 = booleanArray1.replace(/\WOR\W|\WAND\W/ig, ' ');
-  var regXquotedWrd = /".*?"/igm;
-  var matchPhrase;
-  while ((matchPhrase = regXquotedWrd.exec(booleanArray2)) !== null) {
-    var mg = matchPhrase;
-    var msg = msg + mg + '';
-  }
-  if (msg) {
-    var regXun = /undefined|null/igm;
-    var cleaner = msg.replace(regXun, '');
-    var cleanout = booleanArray2.replace(regXquotedWrd, '');
-    var booleanArrc = cleanout.replace(/\s+/g, '"');
-    var cleanQuotes = cleaner + booleanArrc;
-    var end = cleanQuotes.replace(/""/g, '"');
-    var frontbackX = end.replace(/^"|"$/g, '');
-    var booleanArray3 = frontbackX.replace(/"/g, '|');
-  } else {
-    var booleanArray3 = booleanArray2.replace(/\s+/g, '|');
-  }
+var rr = new RegExp(boolNEAR_OR, "igm");
+var edit = booleanString.replace(rr, '');
+var booleanArray1 = edit.replace(/\(|\)|\*|,|\&/ig, '');
+var booleanArray2 = booleanArray1.replace(/\WOR\W|\WAND\W/ig, ' ');
+var regXquotedWrd = /".*?"/igm;
+var matchPhrase;
+while ((matchPhrase = regXquotedWrd.exec(booleanArray2)) !== null) {
+  var mg = matchPhrase;
+  var msg = msg + mg + '';
+}
+if (msg) {
+  var regXun = /undefined|null/igm;
+  var cleaner = msg.replace(regXun, '');
+  var cleanout = booleanArray2.replace(regXquotedWrd, '');
+  var booleanArrc = cleanout.replace(/\s+/g, '"');
+  var cleanQuotes = cleaner + booleanArrc;
+  var end = cleanQuotes.replace(/""/g, '"');
+  var frontbackX = end.replace(/^"|"$/g, '');
+  var booleanArray3 = frontbackX.replace(/"/g, '|');
+} else {
+  var booleanArray3 = booleanArray2.replace(/\s+/g, '|');
+}
 var fin = booleanArray3.replace(/^\||\|$/g, '');
 var finArr = fin.replace(/\|/g, '", "');
+
 function boolieField() {
   var itemArr = JSON.parse('["' + finArr + '"]');
   arrie.forEach(function(elm) {
@@ -102,7 +99,7 @@ function boolieField() {
       for (let e = 0; e < itemArr.length; e++) {
         var exprOuterHtml = document.getElementsByClassName(elm)[i].outerHTML;
         var tstWord = itemArr[e];
-        var rgXword = new RegExp('\\b' + tstWord, "ig");
+        var rgXword = new RegExp('\\b' + tstWord, "igm");
         var docText = document.body.innerText;
         var count = 0;
         while (rgXword.exec(docText) !== null) {
