@@ -1,3 +1,9 @@
+/*/
+
+watch me rebuild this: https://youtu.be/IuAHUomCrqM 
+
+/*/
+
 var userinput = prompt("enter your keywords here...");
 var tosudoArr = userinput.replace(/\W/g, '').replace(/\s+/g, '","')//lets get rid of the stuff people may enter that we do not want... like anything that is not a letter or number.
 //and then we will replace spaces with "," to build a sudo array
